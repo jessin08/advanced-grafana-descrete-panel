@@ -1,5 +1,5 @@
 {
-  "name": "natel-discrete-panel",
+  "name": "discrete-panel-advanced",
   "version": "0.1.1-dev",
   "description": "Discrete Events in Grafana",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "ryantxu",
   "license": "MIT",
   "keywords": [
-    "discrete",
+    "discrete-advanced",
     "canvas",
     "grafana",
     "plugin",

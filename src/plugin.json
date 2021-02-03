@@ -1,14 +1,14 @@
 {
   "type": "panel",
-  "name": "Discrete",
-  "id": "jessin-discrete-panel",
+  "name": "Discrete-Advanced",
+  "id": "discrete-panel-advanced",
 
   "info": {
     "description": "Discrete Events grafana with Excel Export",
     "author": {
       "name": "Jessin Palackal"
     },
-    "keywords": [ "discrete", "events", "strings" ],
+    "keywords": [ "discrete-advanced", "events", "strings" ],
     "logos": {
       "small": "img/discrete_logo.svg",
       "large": "img/discrete_logo.svg"
