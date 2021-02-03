@@ -1,12 +1,12 @@
 {
   "type": "panel",
   "name": "Discrete",
-  "id": "natel-discrete-panel",
+  "id": "jessin-discrete-panel",
 
   "info": {
-    "description": "Discrete Events grafana",
+    "description": "Discrete Events grafana with Excel Export",
     "author": {
-      "name": "Natel Energy"
+      "name": "Jessin Palackal"
     },
     "keywords": [ "discrete", "events", "strings" ],
     "logos": {

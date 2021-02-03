@@ -1221,6 +1221,14 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
       ctx.fillText(dateStr, xPos - xOffset, top + 10);
     }
   }
+
+  get message() {
+    return 'hey';
+  }
+
+  showExportModal(panelid) {
+    console.log(panelid);
+  }
 }
 
 /**

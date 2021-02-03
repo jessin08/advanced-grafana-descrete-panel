@@ -1,7 +1,13 @@
 <div>
     <div class="canvas-spot" style="width:100%;"></div>
-
-    <div ng-show="ctrl.panel.showLegend">
+    <span>
+        <button class="btn gf-form-btn btn-primary"
+        type="button"
+        ng-click="ctrl.showExportModal(panel.id)">
+        <div>Export to Excel {{ctrl.message}}</div>
+        </button>
+    </span>
+    <di ng-show="ctrl.panel.showLegend">
         <div ng-repeat="metric in ctrl.legend">
             <span ng-show="ctrl.panel.showLegendNames">{{ metric.name }}: </span>
             <div ng-show="ctrl.panel.showLegendValues"
@@ -19,5 +25,5 @@
                 &nbsp; Distinct: {{metric.distinctValuesCount}}
             </div>
         </div>
-    </div>
+    </span>
 </div>
