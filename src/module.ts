@@ -1227,12 +1227,14 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     return 'hey';
   }
 
-  showExportModal(panelid) {
+  showExportModal() {
     let fileName = this.panel.title;
     console.log(this.panel);
     console.log(this.data);
+    let data1 = this.data[0].changes;
+    console.log(data1);
     tsXLXS()
-      .exportAsExcelFile(this.data)
+      .exportAsExcelFile(data1)
       .saveAsExcelFile(fileName);
   }
 }
