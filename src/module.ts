@@ -1231,10 +1231,19 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     let fileName = this.panel.title;
     console.log(this.panel);
     console.log(this.data);
-    let data = [];
+    let data;
+    // var d1: any = {};
     for (var d of this.data) {
       console.log(d);
       console.log(d.name);
+      let name = d.name;
+      let arr = d.changes;
+      var x: any = {};
+      x.name = name;
+      x.data = arr;
+      data = x;
+      console.log(data);
+      // data.push(x);
     }
     // d.forEach( obj => {
     //   var name = obj.name;
