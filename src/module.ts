@@ -1,6 +1,7 @@
 import { CanvasPanelCtrl } from './canvas-metric';
 import { DistinctPoints, LegendValue } from './distinct-points';
 import { isArray } from 'lodash';
+import { tsXLXS } from 'ts-xlsx-export';
 
 import {
   DataQueryResponseData,
@@ -1227,7 +1228,12 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
   }
 
   showExportModal(panelid) {
-    console.log(panelid);
+    let fileName = this.panel.title;
+    console.log(this.panel);
+    console.log(this.data);
+    tsXLXS()
+      .exportAsExcelFile(this.data)
+      .saveAsExcelFile(fileName);
   }
 }
 
