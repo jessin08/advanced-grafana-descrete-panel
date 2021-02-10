@@ -1231,12 +1231,29 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     let fileName = this.panel.title;
     console.log(this.panel);
     console.log(this.data);
+    let data = [];
+    for (var d of this.data) {
+      console.log(d);
+      console.log(d.name);
+    }
+    // d.forEach( obj => {
+    //   var name = obj.name;
+    //   console.log(name);
+    //   let data1 = obj.changes;
+    //   console.log(data1);
+    // });
+
     let data1 = this.data[0].changes;
     console.log(data1);
     tsXLXS()
-      .exportAsExcelFile(data1)
+      .exportAsExcelFile(data)
       .saveAsExcelFile(fileName);
   }
+
+  // renameKey(obj,oldKey,newKey ) {
+  //   obj[newKey] = obj[oldKey];
+  //   delete obj[oldKey];
+  // }
 }
 
 /**
