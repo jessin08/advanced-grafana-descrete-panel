@@ -1223,27 +1223,17 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     }
   }
 
-  get message() {
-    return 'hey';
-  }
-
   showExportModal() {
     let fileName = this.panel.title;
     let data1 = [] as any;
     for (var d of this.data) {
-      let name = d.name;
-      let arr = d.changes;
-      var x: any = {};
-      x.name = name;
-      x.data = arr;
-      for (var d1 of arr) {
+      for (var d1 of d.changes) {
         var jsonData = {};
-        jsonData['name'] = name;
+        jsonData['name'] = d.name;
         jsonData['value'] = d1.val;
         jsonData['time'] = moment(d1.start).format('DD-MM-YYYY HH:mm:ss');
         data1.push(jsonData);
       }
-      console.log(data1);
     }
 
     tsXLXS()
