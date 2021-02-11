@@ -1243,11 +1243,14 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
       x.name = name;
       x.data = arr;
       for (var d1 of arr) {
-        console.log(d1);
-        // console.log(d1.val);
-        let x = JSON.parse('{"name":' + name + ',"value":' + d1.val + ',"time":' + d1.start + '}');
-        console.log(x);
-        data1.push(x);
+        var jsonData = {};
+        jsonData['name'] = name;
+        jsonData['value'] = d1.val;
+        jsonData['time'] = d1.start;
+        console.log(jsonData);
+        // let x = JSON.parse('{"name":' + "name" + ',"value":' + d1.val + ',"time":' + d1.start + '}');
+        // console.log(x);
+        data1.push(jsonData);
       }
       // data = x;
       console.log(data1);
