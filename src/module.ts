@@ -1241,19 +1241,17 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
       var x: any = {};
       x.name = name;
       x.data = arr;
-      data = x;
+      for (var d1 of d.changes) {
+        console.log(d1);
+        console.log(d1.val);
+        let x = JSON.parse('{"name":d.name,"value":d1.val,"time":d1.start}');
+        data.push(x);
+      }
+      // data = x;
       console.log(data);
       // data.push(x);
     }
-    // d.forEach( obj => {
-    //   var name = obj.name;
-    //   console.log(name);
-    //   let data1 = obj.changes;
-    //   console.log(data1);
-    // });
 
-    let data1 = this.data[0].changes;
-    console.log(data1);
     tsXLXS()
       .exportAsExcelFile(data)
       .saveAsExcelFile(fileName);
