@@ -1240,7 +1240,7 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
         var jsonData = {};
         jsonData['name'] = name;
         jsonData['value'] = d1.val;
-        jsonData['time'] = d1.start;
+        jsonData['time'] = moment(d1.start).format('DD-MM-YYYY HH:mm:ss');
         data1.push(jsonData);
       }
       console.log(data1);
