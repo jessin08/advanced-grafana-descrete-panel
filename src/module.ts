@@ -1232,6 +1232,7 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     // console.log(this.panel);
     // console.log(this.data);
     let data1;
+    let data2 = [];
     // var d1: any = {};
     for (var d of this.data) {
       // console.log(d);
@@ -1244,7 +1245,7 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
       for (var d1 of d.changes) {
         console.log(d1);
         console.log(d1.val);
-        let x = JSON.parse('{"name":d.name,"value":d1.val,"time":d1.start}');
+        let x = JSON.parse('{"name":' + d.name + ',"value":' + d1.val + ',"time":' + d1.start + '}');
         console.log(x);
         data1.push(x);
       }
@@ -1254,7 +1255,7 @@ class DiscretePanelCtrl extends CanvasPanelCtrl {
     }
 
     tsXLXS()
-      .exportAsExcelFile(data1)
+      .exportAsExcelFile(data2)
       .saveAsExcelFile(fileName);
   }
 
